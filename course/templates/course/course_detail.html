@@ -1,0 +1,351 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block body %}
+
+   
+
+
+            <div class="page-title page-title-blog">
+                <div class="page-title-inner">
+                    <div class="breadcrumbs breadcrumbs-blog text-left">
+                        <div class="container">  
+                            <div class="breadcrumbs-wrap">
+                                <ul class="breadcrumbs-inner">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="course-single.html">Course</a></li>
+                                </ul>
+                                <div class="title">
+                                    Course
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- bg-header -->
+    <div class="courses-single-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="content-page-wrap clearfix">
+                        <div class="course-single">
+                            <div class="featured-post">
+                                <div class="entry-image">
+                                   
+                                   <img src="{{course.image.url}}" alt="images">
+                                     
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="title">
+                                    <a>{{ course }}</a>
+                                </div>
+                                <p>
+                                    {{course.description}}
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="flat-tabs">
+                          
+                            <div class="tab-content-wrap">
+                                <div class="tab-content">
+                                    <div class="item-content">
+                                        <div class="question-sg text clearfix">
+                                            <div class="title">
+                                                <a >What will i learn?</a>
+                                            </div>
+                                            <p>
+                                                {{course.details}}
+                                            </p>
+                                        </div>
+
+                                        <div class="price-course-single">
+                                            <div class="price">
+                                                <span class="price-previou">
+                                                    <del>{{course.price_previou}} DT </del>
+                                                </span>
+                                                <span class="price-now">{{course.price_now}} DT</span>
+                                            </div>
+                                            <div class="btn-buynow">
+                                                <a href="#">Enroll Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="item-content">
+                                        <div class="question-sg text clearfix">
+                                            <div class="title">
+                                                <a href="#">What will i learn?</a>
+                                            </div>
+                                            <p>
+                                                Learn cutting edge deep reinforcement learning algorithms from Deep Q Networks (DQN) to Deep Deterministic Policy Gradients (DDPG). Apply these concepts to train agents to walk, drive, or perform other complex tasks.
+                                            </p>
+                                        </div>
+                                        <div class="access-sg text clearfix">
+                                            <div class="title">
+                                                <a href="#">Access on mobile and TV</a>
+                                            </div>
+                                            <p>
+                                                Access  mobile deep reinforcement learning algorithms and from Deep Networks to Deep Deterministic Policy Gradients. Apply these concepts to train agents to tv walk, drive, or perform other complex tasks.
+                                            </p>
+                                        </div>
+                                        <div class="certificate-sg text clearfix">
+                                            <div class="title">
+                                                <a href="#">Certificate of Completion</a>
+                                            </div>
+                                            <p>
+                                                Access  mobile deep reinforcement learning algorithms from Deep Q Networks to Deep Deterministic Policy Gradients. Apply these concepts to train agents to tv walk, drive, or perform other complex tasks.
+                                            </p>
+                                            <div class="certificate">
+                                                <div class="certificate-wrap">
+                                                    <p>
+                                                        An eduking is a blog created for educational purposes. Eduking blog archive and support student and teacher learning by facilitating reflection, questioning by self becoming a means for educators.
+                                                    </p>
+                                                    <ul class="list-certificate">
+                                                        <li>
+                                                            Graphic designers create visual concepts, 
+                                                        </li>
+                                                        <li>
+                                                            Remember skill can developed with practice.
+                                                        </li>
+                                                        <li>
+                                                            The field is considered a subset of visual communication design.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="images-certificate">
+                                                    <img src="images/course-single/3.jpg" alt="images">
+                                                </div>
+                                            </div>
+                                        </div>
+                                          
+                                        <div class="requirements-sg text clearfix">
+                                            <div class="title">
+                                                <a href="#">Requirements</a>
+                                            </div>
+                                            <ul class="request">
+                                                <li>
+                                                   Understand what visual learning is for and how it is used
+                                                </li>
+                                                <li>
+                                                   Need knowledge of photoshop and basic knowledge of indesign.
+                                                </li>
+                                                <li>
+                                                   Preferable to have experience with PS, Sketch, Indesign and  Adobe XD.
+                                                </li>
+                                                <li>
+                                                   Preferable to understand word embeddings
+                                                </li>
+                                            </ul>
+                                        </div>
+ 
+                                        <div class="description-single text clearfix">
+                                            <div class="title">
+                                                <a href="#">Description</a>
+                                            </div>
+                                            <p>
+                                                Your ability to use types is one of the things that differentiates graphic design from others visual professions. A big parts of graphic design is understanding typography, developing your knowledge of typefaces, & how to apply them in your design. This will be a constant study throughout your career.
+                                            </p>
+                                        </div>
+
+                                        <div class="price-course-single">
+                                            <div class="price">
+                                                <span class="price-previou">
+                                                    <del>$169</del>
+                                                </span>
+                                                <span class="price-now">$169</span>
+                                            </div>
+                                            <div class="btn-buynow">
+                                                <a href="#">Buy Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-content">
+                                    <div class="item-content">
+                                        <div class="question-sg text clearfix">
+                                            <div class="title">
+                                                <a href="#">What will i learn?</a>
+                                            </div>
+                                            <p>
+                                                Learn cutting edge deep reinforcement learning algorithms from Deep Q Networks (DQN) to Deep Deterministic Policy Gradients (DDPG). Apply these concepts to train agents to walk, drive, or perform other complex tasks.
+                                            </p>
+                                        </div>
+                                        <div class="access-sg text clearfix">
+                                            <div class="title">
+                                                <a href="#">Access on mobile and TV</a>
+                                            </div>
+                                            <p>
+                                                Access  mobile deep reinforcement learning algorithms and from Deep Networks to Deep Deterministic Policy Gradients. Apply these concepts to train agents to tv walk, drive, or perform other complex tasks.
+                                            </p>
+                                        </div>
+                                        <div class="certificate-sg text clearfix">
+                                            <div class="title">
+                                                <a href="#">Certificate of Completion</a>
+                                            </div>
+                                            <p>
+                                                Access  mobile deep reinforcement learning algorithms from Deep Q Networks to Deep Deterministic Policy Gradients. Apply these concepts to train agents to tv walk, drive, or perform other complex tasks.
+                                            </p>
+                                            <div class="certificate">
+                                                <div class="certificate-wrap">
+                                                    <p>
+                                                        An eduking is a blog created for educational purposes. Eduking blog archive and support student and teacher learning by facilitating reflection, questioning by self becoming a means for educators.
+                                                    </p>
+                                                    <ul class="list-certificate">
+                                                        <li>
+                                                            Graphic designers create visual concepts, 
+                                                        </li>
+                                                        <li>
+                                                            Remember skill can developed with practice.
+                                                        </li>
+                                                        <li>
+                                                            The field is considered a subset of visual communication design.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="images-certificate">
+                                                    <img src="images/course-single/3.jpg" alt="images">
+                                                </div>
+                                            </div>
+                                        </div>
+                                          
+                                        <div class="requirements-sg text clearfix">
+                                            <div class="title">
+                                                <a href="#">Requirements</a>
+                                            </div>
+                                            <ul class="request">
+                                                <li>
+                                                   Understand what visual learning is for and how it is used
+                                                </li>
+                                                <li>
+                                                   Need knowledge of photoshop and basic knowledge of indesign.
+                                                </li>
+                                                <li>
+                                                   Preferable to have experience with PS, Sketch, Indesign and  Adobe XD.
+                                                </li>
+                                                <li>
+                                                   Preferable to understand word embeddings
+                                                </li>
+                                            </ul>
+                                        </div>
+ 
+                                        <div class="description-single text clearfix">
+                                            <div class="title">
+                                                <a href="#">Description</a>
+                                            </div>
+                                            <p>
+                                                Your ability to use types is one of the things that differentiates graphic design from others visual professions. A big parts of graphic design is understanding typography, developing your knowledge of typefaces, & how to apply them in your design. This will be a constant study throughout your career.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="sidebar-right">
+                        <div class="widget widget-class-start">
+                            <div class="widget-title">
+                                Class Start on 
+                                <span>{{course.when | date:'d M o'}}</span>
+
+                            </div>
+                           
+                            <div  class="content">
+                                <div class="flat-counter count-time" data-day={{days}} data-month={{month}} data-year={{year}} data-hour={{hours}} data-minutes={{minutes}} data-second={{seconds}}>
+                                    <div class="counter">
+                                        <ul>
+                                            <li class="content-counter">
+                                                <div class="wrap-bg">
+                                                    <div class="inner-bg days">
+                                                        <div class="numb-count numb cl-667eea">178</div>
+                                                        <div class="name-count">Day</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="content-counter">
+                                                <div class="wrap-bg">
+                                                    <div class="inner-bg hours">
+                                                        <div class="numb-count numb cl-f0c41b">12</div>
+                                                        <div class="name-count">Hour</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="content-counter">
+                                                <div class="wrap-bg">
+                                                    <div class="inner-bg minutes">
+                                                        <div class="numb-count numb cl-8b46f4">55</div>
+                                                        <div class="name-count">Minute</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="content-counter">
+                                                <div class="wrap-bg">
+                                                    <div class="inner-bg seconds">
+                                                        <div class="numb-count numb cl-ff5f60">55</div>
+                                                        <div class="name-count">Second</div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="widget widget-features">
+                            <div class="widget-title">
+                                Course Features
+                            </div>
+                            <div class="content">
+                                <ul class="features">
+                                    <li>
+                                        <a >Lectures</a>
+                                        <span>{{course.days}}</span>
+                                    </li>
+                                    <li>
+                                        <a >Duration</a>
+                                        <span>{{course.duration}} h</span>
+                                    </li>
+                                    
+                                    <li>
+                                        <a >Certificate</a>
+                                        <span>{{course.certification}}</span>
+                                    </li>
+                                    <li>
+                                        <a >Skill</a>
+                                        <span>{{course.skill}}</span>
+                                    </li>
+                                    <li>
+                                        <a >Category</a>
+                                        <span>{{course.category}}</span>
+                                    </li>
+                                </ul>
+                                <div class="share-via">
+                                    <div class="title">
+                                        Share via
+                                    </div>
+                                    <ul class="social-media">
+                                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- courses-single -->
+
+
+
+
+
+{% endblock body %}

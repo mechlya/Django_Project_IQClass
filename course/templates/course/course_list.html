@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% block body %}
+
+    </div><!-- bg-header -->
+    <div class="course-list mg-top1 clearfix">
+        <div class="container">
+            <div class="col-30">
+              
+                <div class="sidebar-left sidebar-course">
+                    <div class="widget widget-categories">
+                        <div class="widget-title">
+                            Filter
+                            <span class="bg">
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        
+                        <form method='GET'>
+                                {% bootstrap_form myfilter.form %}
+                                <input type ="submit" value='Search' class="enroll w-100 mt-5">
+
+                            </form>
+
+                    </div>
+                </div><!-- sidebar-left -->
+            </div>
+
+
+            <div class="col-70">
+                <div class="thim-course-top">
+                    <div class="course-index">
+                        All prices are in DT
+                    </div>
+                    <div class="switch-layout">
+                        <a >
+                            <span class="icon-icons8-list-filled-480"></span>
+                        </a>
+                        <a >
+                            <span class="icon-icons8-grid-view-480"></span>
+                        </a>
+                    </div>
+                </div>
+
+
+
+
+                
+                <div class="content-course-list">
+                    {% for course in courses %}
+
+
+                    <div class="flat-course clearfix">
+
+                        <div class="featured-post">
+
+                            <div class="entry-image">
+                                <img src="{{course.image.url}}" alt="images">
+                            </div>
+                        </div>
+                        <div class="course-content clearfix">
+                            <div class="wrap-course-content">
+                                <h4>
+                                    <a href="{% url 'courses:course_detail' course.slug %}">{{ course }}</a>
+                                </h4>
+                                <p>
+                                    {{ course.description}} 
+                                </p>
+                                <div class="author-info">
+                                    
+                                    <div class="enroll">
+                                        <a href="{% url 'courses:course_detail' course.slug %}">Enroll</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrap-rating-price">
+                                <div class="meta-rate">
+                                    <div class="rating">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <span>(4)</span>
+                                    </div>
+                                    <div class="price">
+                                        <span class="price-previou">
+                                            <del>{{course.price_previou}} DT</del>
+                                        </span>
+                                        <span class="price-now">{{course.price_now}} DT</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                
+                  
+                {% endfor %}
+                </div>
+
+                
+
+                {% if courses.has_other_pages%}
+                <div class="pagination">
+                    <ul>
+                      {% if courses.has_previous %}
+                       <li><a href="?page={{ courses.previous_page_number }}" class="page-numbers"> <i class="ti-angle-left"><</a></li>
+                      {% endif %}
+
+                      {% for i in courses.paginator.page_range%}
+                      <li><a href="?page{{i}}" class="page-numbers" ><span>{{i}}</a></li>
+                      {% endfor %}  
+                      {% if courses.has_next %}
+                      <li><a href="?page={{ courses.next_page_number }}"  class="page-numbers">></a></li>
+                      {% endif %}
+
+                    </ul>
+                </div><!-- pagination -->
+                {% endif %}
+
+            </div>
+        </div>
+    </div><!-- course-list -->
+
+{% endblock body %}
